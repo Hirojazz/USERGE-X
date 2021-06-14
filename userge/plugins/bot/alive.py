@@ -93,9 +93,9 @@ async def send_alive_message(message: Message) -> None:
         reply_markup = None
         file_id = _USER_CACHED_MEDIA
         caption += (
-            f"\n⚡️  <a href={Config.UPSTREAM_REPO}><b>REPO</b></a>"
+            f"\n⚡️  <a href='https://t.me/ChaHae_In'><b>REPO</b></a>"
             "    <code>|</code>    "
-            "👥  <a href='https://t.me/useless_x'><b>SUPPORT</b></a>"
+            "👥  <a href='https://t.me/WeebsGuild'><b>GROUP 💬</b></a>"
         )
     if not Config.ALIVE_MEDIA:
         await client.send_photo(
@@ -111,7 +111,7 @@ async def send_alive_message(message: Message) -> None:
             chat_id,
             caption=caption,
             reply_markup=reply_markup,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
         )
     else:
         type_, media_ = await Bot_Alive.check_media_link(Config.ALIVE_MEDIA)
@@ -227,11 +227,11 @@ class Bot_Alive:
     @staticmethod
     def alive_info() -> str:
         alive_info_ = f"""
-<a href="https://telegram.dog/x_xtests"><b>USERGE-X</a> is Up and Running.</b>
+<a href="https://t.me/ChaHae_In"><b>ᎻႮΝͲᎬᎡ ᏟᎻᎪ</a></b>
 
   🐍   <b>Python :</b>    <code>v{versions.__python_version__}</code>
   🔥   <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
-  🧬   <b>𝑿 :</b>    <code>v{get_version()}</code>
+  🧬   <b>ᴄʜᴀ:</b>    <code>v{get_version()}</code>
 
 <b>{Bot_Alive._get_mode()}</b>    <code>|</code>    🕔  <b>{userge.uptime}</b>
 """
@@ -250,7 +250,7 @@ class Bot_Alive:
         buttons = [
             [
                 InlineKeyboardButton(text="🔧  SETTINGS", callback_data="settings_btn"),
-                InlineKeyboardButton(text="⚡  REPO", url=Config.UPSTREAM_REPO),
+                InlineKeyboardButton(text="⚡  REPO", url="https://t.me/ChaHae_In"),
             ]
         ]
         return InlineKeyboardMarkup(buttons)
@@ -258,11 +258,11 @@ class Bot_Alive:
     @staticmethod
     def alive_default_imgs() -> str:
         alive_imgs = [
-            "https://telegra.ph/file/11123ef7dff2f1e19e79d.jpg",
-            "https://i.imgur.com/uzKdTXG.jpg",
-            "https://telegra.ph/file/6ecab390e4974c74c3764.png",
-            "https://telegra.ph/file/995c75983a6c0e4499b55.png",
-            "https://telegra.ph/file/86cc25c78ad667ca5e691.png",
+            "https://telegra.ph/file/d9a64567511a6b478fc3c.jpg",
+            "https://telegra.ph/file/499959e0900af048ccd3c.jpg",
+            "https://telegra.ph/file/12c5083f210572180bd41.jpg",
+            "https://telegra.ph/file/eece0dd277412002d56c7.jpg",
+            "https://telegra.ph/file/4ecd35567d89457d8e566.jpg",
         ]
         return rand_array(alive_imgs)
 
