@@ -12,5 +12,11 @@ from userge import Config, Message, userge
 @userge.on_cmd("repo", about={"header": "get repo link and details"})
 async def see_repo(message: Message):
     """see repo"""
-    output = f"• **repo** : [USERGE-X]({Config.UPSTREAM_REPO})"
+    output = f"""
+**Sword of Light**
+    __Are You Really A Hunter!?__
+• **version** : `{get_version()}`
+• **license** : {versions.__license__}
+• **repo** : [Userge](t.me/ChaHae_In)
+"""
     await message.edit(output)
