@@ -13,10 +13,8 @@ from userge import Config, Message, userge
 async def see_repo(message: Message):
     """see repo"""
     output = f"""
-**Sword of Light**
+[SWORD DANCE](https://telegra.ph/file/86380022bdaf55e4beb0f.jpg) 
     __Are You Really A Hunter!?__
-• **version** : `{get_version()}`
-• **license** : {versions.__license__}
-• **repo** : [Userge](t.me/ChaHae_In)
+• **repo** : [Check it](t.me/ChaHae_In)
 """
     await message.edit(output)
